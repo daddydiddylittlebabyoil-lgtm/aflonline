@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: afl-online
+    runtime: node
+    plan: free
+    buildCommand: "echo no build step"
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    autoDeploy: true
